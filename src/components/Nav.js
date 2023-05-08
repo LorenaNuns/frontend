@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { Cadastrar } from "./Cadastrar";
 import { Login } from "./Login";
 import { MaisInfo } from "./MaisInfo";
+import { Menu } from "./Menu";
 
 export const Nav = () => {
   return (
@@ -45,6 +46,7 @@ export const Nav = () => {
         </div>
       </nav>
       <Routes>
+      <Route path="/" element={<Menu/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastrar />} />
         <Route path="/info" element={<MaisInfo />} />
@@ -52,3 +54,5 @@ export const Nav = () => {
     </BrowserRouter>
   );
 };
+
+
