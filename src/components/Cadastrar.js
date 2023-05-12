@@ -25,7 +25,7 @@ export const Cadastrar = () => {
     //d-flex: deixa a div responsiva
     //onSubmit é uma função direta da tag Form
     <div className='d-flex align-items-center justify-content-center' style={{height: "100vh"}}>
-        <div className='border rounded p-5' style={{backgroundColor: "#9370DB", borderRadius: "25px" }}>
+        <div className='border rounded p-5' style={{backgroundColor: "#5f4888", borderRadius: "25px" }}>
             <Form style={{color: "snow", margin: "5px"}} onSubmit={handleSubmit}>
                 <h1 className="text-center text-lowercase fw-bold">Cadastrar</h1>
                 <Form.Group controlId='formBasicText'>
@@ -45,7 +45,7 @@ export const Cadastrar = () => {
                         <Form.Control type="password" placeholder='senha' value={senha} onChange={(event) => setSenha(event.target.value)}>
                         </Form.Control>
                 </Form.Group>
-                <Button classname="" style={{backgroundColor: "#ffae00", borderColor: "#9370DB", marginTop: "10px"}} type='submit'>
+                <Button className="" style={{backgroundColor: "#ffae00", borderColor: "#ffae00", marginTop: "10px"}} type='submit'>
                     Cadastrar
                 </Button>
             </Form>

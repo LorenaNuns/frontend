@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import {Form, Button} from 'react-bootstrap';
 import { TabelaProfessor } from './TelaProfessor/Pages/TabelaProfessor';
+import { Navigate } from 'react-router-dom';
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,13 +25,13 @@ export const Login = () => {
   }
 
   if(loggedIn) {
-    return <TabelaProfessor></TabelaProfessor>
+    return <Navigate to="/professor/:id/"/>
   }
 
 
   return (
     <div className='d-flex align-items-center justify-content-center' style={{height: "100vh"}}>
-        <div className='border rounded p-5' style={{backgroundColor: "#9370DB", borderRadius: "25px" }}>
+        <div className='border rounded p-5' style={{backgroundColor: "#5f4888", borderRadius: "25px" }}>
             <Form style={{color: "snow", margin: "5px"}} onSubmit={handleLogin}>
                 <h1 className='text-center text-lowercase fw-bold'>Login</h1>
 
@@ -45,7 +46,7 @@ export const Login = () => {
                         <Form.Control type="password" placeholder='senha' value={senha} onChange={(event) => setSenha(event.target.value)}>
                         </Form.Control>
                 </Form.Group>
-                <Button style={{backgroundColor: "#D358F7", borderColor: "#9370DB", marginTop: "10px"}} type='submit'>
+                <Button style={{backgroundColor: "#ffae00", borderColor: "#ffae00", marginTop: "10px"}} type='submit'>
                     Entrar
                 </Button>
             </Form>

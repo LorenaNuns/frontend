@@ -4,6 +4,7 @@ import { Cadastrar } from "./Cadastrar";
 import { Login } from "./Login";
 import { MaisInfo } from "./MaisInfo";
 import { Menu } from "./Menu";
+import { TabelaProfessor } from "./TelaProfessor/Pages/TabelaProfessor";
 
 export const Nav = () => {
   return (
@@ -48,7 +49,8 @@ export const Nav = () => {
       <Routes>
       <Route path="/" element={<Menu/>} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastrar />} />
+        <Route path="/professor/:id" element={<TabelaProfessor/>} />
+        <Route path="/cadastro" element={<Cadastrar/>} />
         <Route path="/info" element={<MaisInfo />} />
       </Routes>
     </BrowserRouter>
